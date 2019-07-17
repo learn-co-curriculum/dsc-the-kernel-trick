@@ -17,11 +17,11 @@ You will be able to:
 
 In the previous lab, you looked at a plot where a linear boundary was clearly not sufficient to separate the two classes cleanly. Another example where a linear boundary would not work well is shown below. How would you draw a max margin classifier here? The intuitive solution is to draw an arc around the circles, separating them from the surrounding diamonds. To generate non-linear boundaries such as this, you use what is known as a kernel.
 
-![title](SVM_nonlin.png)
+<img src="images/new_SVM_nonlin.png" width="500">
 
 The idea behind kernel methods is to create (nonlinear) combinations of the original features, and project them onto a higher-dimensional space. For example, take a look at how this dataset could be transformed with an appropriate kernel from a two-dimensional dataset onto a new three-dimensional feature space.
 
-![title](SVM_kernel.png)
+<img src="images/new_SVM_kernel.png" width="500">
 
 ## Types of kernels
 
