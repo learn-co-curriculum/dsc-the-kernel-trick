@@ -20,7 +20,7 @@ In the previous lab, you looked at a plot where a linear boundary was clearly no
 
 <img src="images/new_SVM_nonlin.png" width="500">
 
-The idea behind kernel methods is to create (nonlinear) combinations of the original features, and project them onto a higher-dimensional space. For example, take a look at how this dataset could be transformed with an appropriate kernel from a two-dimensional dataset onto a new three-dimensional feature space.
+The idea behind kernel methods is to create (nonlinear) combinations of the original features and project them onto a higher-dimensional space. For example, take a look at how this dataset could be transformed with an appropriate kernel from a two-dimensional dataset onto a new three-dimensional feature space.
 
 <img src="images/new_SVM_kernel.png" width="500">
 
@@ -36,7 +36,7 @@ The linear kernel is, as you've seen, the default kernel and simply creates line
 
 There are two parameters when training an SVM with the *R*adial *B*asis *F*unction: $C$ and $gamma$. 
 
-- The parameter $C$ is common to all SVM kernels. Again, by tuning the $C$ parameter when using kernels, you can provide a trafe-off between misclassification of the training set and simplicity of the decision function. a high $C$ will classify as many samples correctly as possible (and might potentially lead to overfitting) 
+- The parameter $C$ is common to all SVM kernels. Again, by tuning the $C$ parameter when using kernels, you can provide a trade-off between misclassification of the training set and simplicity of the decision function. A high $C$ will classify as many samples correctly as possible (and might potentially lead to overfitting) 
 
 - $gamma$ defines how much influence a single training example has. The larger $gamma$ is, the closer other examples must be to be affected 
 
@@ -46,7 +46,7 @@ $$\exp{(-\gamma \lVert  x -  x' \rVert^2)} $$
 
 Gamma has a strong effect on the results: a $gamma$ that is too large will lead to overfitting, while a $gamma$ which is too small will lead to underfitting (kind of like a simple linear boundary for a complex problem). 
 
-In scikit-learn, you can specify a value for $gamma$ using the parameter `gamma`. The default `gamma` value is "auto", if no other gamma is specified, gamma is set to $1/\text{number_of_features}$ . More on parameters in the RBF kernel [here](https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html).
+In scikit-learn, you can specify a value for $gamma$ using the parameter `gamma`. The default `gamma` value is "auto", if no other gamma is specified, gamma is set to $1/\text{number_of_features}$ . You can find more on parameters in the RBF kernel [here](https://scikit-learn.org/stable/auto_examples/svm/plot_rbf_parameters.html).
 
 ### The Polynomial kernel
 
@@ -69,7 +69,7 @@ This kernel is similar to the signoid function in logistic regression.
 
 ### NuSVC
 
-NuSVC is similar to SVC, but adds an additional parameter, $\nu$, which controls the number of support vectors and training errors. $\nu$ jointly creates an upper bound on training errors, and a lower bound on support vectors.
+NuSVC is similar to SVC, but adds an additional parameter, $\nu$, which controls the number of support vectors and training errors. $\nu$ jointly creates an upper bound on training errors and a lower bound on support vectors.
 
 
 Just like SVC, NuSVC implements the "one-against-one" approach when there are more than 2 classes. This means that when there are n classes, $\dfrac{n*(n-1)}{2}$ classifiers are created, and each one classifies samples in 2 classes. 
@@ -85,4 +85,4 @@ You can make predictions using support vector machines. The SVC decision functio
 
 ## Summary
 
-Great! You now know have a basic understanding of how to use kernel functions in Support Vector Machines. You'll do just that in the upcoming lab!
+Great! You now have a basic understanding of how to use kernel functions in Support Vector Machines. You'll do just that in the upcoming lab!
